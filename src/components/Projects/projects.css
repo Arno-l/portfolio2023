@@ -1,0 +1,194 @@
+.projects-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.project-cards {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card {
+  cursor: pointer;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.project-card:hover .screenshot,
+.project-card:focus .screenshot {
+    transform: scale(1.1);
+    filter: brightness(20%);
+}
+
+.screenshot {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-width: 100%;
+    height: auto;
+    transform: scale(1);
+    filter: brightness(100%);
+    transition: transform 1s, filter 1s;
+}
+
+.project-title-container {
+    text-align: center;
+    width: 100%;
+}
+
+.project-title {
+    color: var(--orange);
+    font-family: Montserrat, sans-serif;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 1s, opacity 1s;
+}
+
+.project-techno-title {
+    position: absolute;
+    top: 30%;
+    left:50%;
+    color: var(--white);
+    font-family: Montserrat, sans-serif;
+    font-weight:400;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.5s, opacity 1s;
+    transform: translate(-50%, -50%);
+}
+
+.project-line {
+    position: absolute;
+    top: 45%;
+    left:50%;
+    width: 0%;
+    height: 2.5px;
+    background-color: var(--orange);
+    transition: width 0.5s ease-in-out;
+    transform: translate(-50%, -50%);
+}
+
+.technos-container {
+    width: 80%;
+    position: absolute;
+    top: 55%;
+    left:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.5s, opacity 1s;
+}
+
+.techno-logo {
+    width: 80px;
+    height:80px;
+}
+
+.project-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.5s, opacity 1s;
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+    background-color: var(--orange);
+}
+
+.plus-logo {
+    width: 50px;
+    height: 50px;
+}
+
+
+.project-card:hover .project-title ,
+.project-card:focus .project-title  {
+    visibility: visible;
+    opacity: 1;
+}
+
+.project-card:hover .project-techno-title ,
+.project-card:focus .project-techno-title  {
+    visibility: visible;
+    opacity: 1;
+}
+
+.project-card:hover .project-line ,
+.project-card:focus .project-line {
+    width: 75%;
+}
+  
+.project-card:hover .technos-container ,
+.project-card:focus .technos-container  {
+    visibility: visible;
+    opacity: 1;
+}
+
+.project-card:hover .project-btn ,
+.project-card:focus .project-btn  {
+    visibility: visible;
+    opacity: 1;
+}
+
+@media only screen and (min-width:500px) and (max-width: 650px) {
+
+    .project-title {
+        font-size: 1.2em!important;
+    }
+    .project-techno-title {
+        font-size: 1em!important;
+    }
+    .techno-logo {
+        width: 60px!important;
+        height:60px!important;
+    }
+
+}
+
+@media only screen and (max-width: 650px) {
+    .project-cards {
+        width: 100%;
+    }
+    .project-title {
+        font-size: 1em;
+    }
+    .project-techno-title {
+        font-size: 0.8em;
+    }
+    .techno-logo {
+        width: 50px;
+        height:50px;
+    }
+    .technos-container {
+        top:60%;
+    }
+    .plus-logo {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width:1040px) {
+    .project-cards {
+        width: 80%;
+    }
+}
+

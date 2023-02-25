@@ -1,0 +1,26 @@
+
+.firstpage-ctn {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-y: none;
+    background-color: var(--dark2);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+
+.big-logo-aldev-ctn {
+    display: flex;
+
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 50px;
+}
+
+
