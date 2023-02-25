@@ -12,6 +12,7 @@ import sassLogo from "../../assets/images/sass.png";
 import rubyLogo from "../../assets/images/skills-ruby.png";
 import railsLogo from "../../assets/images/rails.png";
 import plusLogo from "../../assets/images/+.png";
+import ProjectDetails from "../ProjectDetails/projectDetails";
 
 const Projects = () => {
   const [lineWidth, setLineWidth] = useState("0vw");
@@ -53,6 +54,7 @@ const Projects = () => {
     document.getElementsByClassName("greying")[0].style.backgroundColor =
       "#484a4a";
   }
+
 
   return (
     <>

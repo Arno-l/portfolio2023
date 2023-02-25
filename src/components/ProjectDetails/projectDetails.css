@@ -1,56 +1,101 @@
 .project-details {
-    width: 50vw;
-    position: fixed;
-    top: 25%;
-    right: 25%;
-    left: 25%;
-    z-index: 1;
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  width: 50vw;
+  position: fixed;
+  top: 25%;
+  right: 25%;
+  left: 25%;
+  z-index: 1;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.project-logo-container {
+.close-project-container {
     width: 100%;
-    height: 200px;
-    background-color: var(--dark);
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: flex-end;
+    background-color: var(--dark);
+}
+
+
+.project-logo-container {
+  width: 100%;
+  height: 200px;
+  background-color: var(--dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .project-logo {
-    max-width: 100%;
-    width: 50%;
-    height: 50%;
-    height: max-content;
-    position: relative;
+  max-width: 100%;
+  width: 50%;
+  height: max-content;
+  position: relative;
 }
 
 .project-infos {
-    width: 100%;
-    display: flex;
-    align-items: flex-start;
-    background-color: var(--white);
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  background-color: var(--white);
 }
 
 .project-section {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-    margin-top: -30px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  margin-top: -30px;
 }
 
 .project-section-title {
-    font-family: Montserrat, sans-serif;
-    color: var(--dark)
+  font-family: Montserrat, sans-serif;
+  color: var(--dark);
 }
 
 .project-text {
-    font-family: Roboto, sans-serif;
-    font-size: 0.83em;
+  font-family: Roboto, sans-serif;
+  font-size: 0.83em;
+}
+
+@media only screen and (max-width:500px) {
+    .project-logo {
+       width: 70%;
+    }
+}
+
+
+@media only screen and (max-width:1000px) {
+    .project-details {
+        width: 100vw;
+        top: 0%;
+        left: 0%;
+    }
+
+    .project-infos {
+      flex-direction: column;
+      align-items: center;
+    }
+    .project-section {
+        width: 80%;
+      }
+  }
+
+@media only screen and (min-width: 2000px) {
+  .project-logo-container {
+    height: 300px;
+  }
+}
+
+@media only screen and (max-height: 600px) {
+  .project-details {
+    top: 0%;
+    position: relative;
+  }
+
 }

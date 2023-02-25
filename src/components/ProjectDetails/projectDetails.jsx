@@ -1,11 +1,25 @@
 import React from "react";
 import "./projectDetails.css";
 import imgTest from "../../assets/images/a.lcci.png";
+import closeLogo from "../../assets/images/cross.png";
 
 const ProjectDetails = () => {
+
+  function closePopup() {
+    document.getElementsByClassName("project-details")[0].style.display =
+    "none";
+  document.getElementsByClassName("greying")[0].style.opacity = "1";
+  document.getElementsByClassName("greying")[0].style.background =
+      "linear-gradient(to top, #031014, #000312)";
+  }
+
+
   return (
     <>
       <div className="project-details">
+        <div className="close-project-container">
+          <img onClick={closePopup} style={{cursor:"pointer"}} src={closeLogo} alt="close cross" />
+        </div>
         <div className="project-logo-container">
             <img className="project-logo" src={imgTest} alt="project logo"/>
         </div>
