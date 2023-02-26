@@ -9,6 +9,8 @@
     "@testing-library/user-event": "^13.5.0",
     "aos": "^2.3.4",
     "framer-motion": "^8.5.4",
+    "jotai": "^2.0.2",
+    "js-cookie": "^3.0.1",
     "react": "^18.2.0",
     "react-burger-menu": "^3.0.9",
     "react-dom": "^18.2.0",

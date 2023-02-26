@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { useSetAtom } from "jotai";
+import { projectLogoAtom, projectNumberAtom, projectInfoAtom, fullRealizationAtom } from "../../store/atoms";
 import "./projects.css";
 import portfolioScreen from "../../assets/images/portfolio-screen.png";
 import clvScreen from "../../assets/images/clv-screen.png";
@@ -12,11 +14,38 @@ import sassLogo from "../../assets/images/sass.png";
 import rubyLogo from "../../assets/images/skills-ruby.png";
 import railsLogo from "../../assets/images/rails.png";
 import plusLogo from "../../assets/images/+.png";
-import ProjectDetails from "../ProjectDetails/projectDetails";
+import portfolioLogo from "../../assets/images/a.lcci.png";
+import assocLogo from "../../assets/images/logo-assoc.png";
+import scoreitLogo from "../../assets/images/scoreit-logo.png";
 
 const Projects = () => {
+
+
   const [lineWidth, setLineWidth] = useState("0vw");
   const [isOnTargetDiv, setIsOnTargetDiv] = useState(true);
+  const setProjectLogo = useSetAtom(projectLogoAtom);
+  const setProjectNumber = useSetAtom(projectNumberAtom);
+  const setProjectInfo = useSetAtom(projectInfoAtom);
+  const setFullRealization = useSetAtom(fullRealizationAtom);
+
+  function handleLogo(number) {
+    switch(number) {
+      case 1:
+        setProjectLogo(portfolioLogo);
+        setProjectNumber(1);
+        break;
+      case 2:
+        setProjectLogo(assocLogo);
+        setProjectNumber(2);
+        break;
+      case 3:
+        setProjectLogo(scoreitLogo);
+        setProjectNumber(3);
+        break;
+      default:
+        setProjectLogo("");
+    }
+  }
 
 
   useEffect(() => {
@@ -64,7 +93,7 @@ const Projects = () => {
       </div>
       <div className="projects-container">
         <div className="project-cards">
-          <div className="project-card" onClick={activePopup}>
+          <div className="project-card" onClick={() => {activePopup(); handleLogo(1)}}>
             <img
               className="screenshot"
               src={portfolioScreen}
@@ -85,7 +114,7 @@ const Projects = () => {
               </div>
             </div>
           </div>
-          <div className="project-card">
+          <div className="project-card" onClick={() => {activePopup(); handleLogo(2)}}>
             <img
               className="screenshot"
               src={clvScreen}
@@ -109,7 +138,7 @@ const Projects = () => {
               </div>
             </div>
           </div>
-          <div className="project-card">
+          <div className="project-card" onClick={() => {activePopup(); handleLogo(3)}}>
             <img
               className="screenshot"
               src={scoreitScreen}

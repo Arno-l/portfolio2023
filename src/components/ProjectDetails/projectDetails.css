@@ -28,13 +28,14 @@
   justify-content: center;
   align-items: center;
 }
-
-.project-logo {
+/*
+.portfolio-logo {
   max-width: 100%;
   width: 50%;
   height: max-content;
   position: relative;
 }
+*/
 
 .project-infos {
   width: 100%;
@@ -64,9 +65,11 @@
 }
 
 @media only screen and (max-width:500px) {
-    .project-logo {
+  /*  
+  .portfolio-logo {
        width: 70%;
     }
+    */
 }
 
 
@@ -86,9 +89,32 @@
       }
   }
 
+  @media only screen and (min-width:1500px) {
+    .project-section-title {
+      font-size: 1em;
+    }
+    .project-text {
+      font-size: 0.93em;
+    }
+  }
+
 @media only screen and (min-width: 2000px) {
+  .project-details {
+    width: 40vw;
+  }
   .project-logo-container {
     height: 300px;
+  }
+  /*
+  .portfolio-logo {
+    width:40%;
+  }
+  */
+  .project-section-title {
+    font-size: 1em;
+  }
+  .project-text {
+    font-size: 0.93em;
   }
 }
 
