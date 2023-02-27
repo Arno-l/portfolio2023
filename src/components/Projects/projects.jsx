@@ -28,25 +28,31 @@ const Projects = () => {
   const setProjectInfo = useSetAtom(projectInfoAtom);
   const setFullRealization = useSetAtom(fullRealizationAtom);
 
-  function handleLogo(number) {
+  function handleDetails(number) {
     switch(number) {
       case 1:
         setProjectLogo(portfolioLogo);
         setProjectNumber(1);
+        setProjectInfo("Mon portfolio qui contient des informations à propos de moi, mes compétences ainsi que des exemples de projets réalisés. Vous êtes actuellement sur ce site.");
+        setFullRealization(["Développement sous React.js", "Référencement naturel SEO", "Site responsive (compatible tous supports)"]);
         break;
       case 2:
         setProjectLogo(assocLogo);
         setProjectNumber(2);
+        setProjectInfo("Un site web vitrine crée pour une association de chant choral dans le cadre de mon stage de la fin de formation à The Hacking Project.");
+        setFullRealization(["Frontend avec React.js", "Backend avec Ruby on Rails et Postgresql", "Authentification via JWT (Json Web Tokens)", "Hébergement des médias sur Cloudinary", "Mise à l'échelle de la BDD avec Fly.io", "Référencement naturel SEO", "Site responsive (compatible tous supports)"]);
         break;
       case 3:
         setProjectLogo(scoreitLogo);
         setProjectNumber(3);
+        setProjectInfo("Une plateforme crée en équipe lors de ma formation The Hacking Project qui permet aux fondateurs de start-up d'obtenir une notation sur leur projet.");
+        setFullRealization(["App Ruby on Rails", "Utilisation d'AJAX pour la performance", "Utilisation de OmniAuth pour faciliter l'identification", "Utilisation de Bootstrap", "Hébergement des médias sur AWS (Amazon Web Services)", "Référencement naturel SEO", "Site responsive (compatible tous supports)"]);
         break;
       default:
-        setProjectLogo("");
+        setProjectLogo(null);
+        break;
     }
   }
-
 
   useEffect(() => {
     function handleScroll() {
@@ -93,7 +99,7 @@ const Projects = () => {
       </div>
       <div className="projects-container">
         <div className="project-cards">
-          <div className="project-card" onClick={() => {activePopup(); handleLogo(1)}}>
+          <div className="project-card" onClick={() => {activePopup(); handleDetails(1)}}>
             <img
               className="screenshot"
               src={portfolioScreen}
@@ -114,7 +120,7 @@ const Projects = () => {
               </div>
             </div>
           </div>
-          <div className="project-card" onClick={() => {activePopup(); handleLogo(2)}}>
+          <div className="project-card" onClick={() => {activePopup(); handleDetails(2)}}>
             <img
               className="screenshot"
               src={clvScreen}
@@ -138,7 +144,7 @@ const Projects = () => {
               </div>
             </div>
           </div>
-          <div className="project-card" onClick={() => {activePopup(); handleLogo(3)}}>
+          <div className="project-card" onClick={() => {activePopup(); handleDetails(3)}}>
             <img
               className="screenshot"
               src={scoreitScreen}
