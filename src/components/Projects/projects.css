@@ -25,7 +25,7 @@
 .project-card:hover .screenshot,
 .project-card:focus .screenshot {
     transform: scale(1.1);
-    filter: brightness(20%);
+    filter: brightness(5%);
 }
 
 .screenshot {

@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from "react";
 import "./projectDetails.css";
 import { useAtom } from "jotai";
-import { projectLogoAtom, projectNumberAtom, projectInfoAtom, fullRealizationAtom } from "../../store/atoms";
+import { projectLogoAtom, projectNumberAtom, projectInfoAtom, fullRealizationAtom, projectLinkAtom } from "../../store/atoms";
 import closeLogo from "../../assets/images/cross.png";
+import linkLogo from "../../assets/images/link.png";
 
 
 const ProjectDetails = () => {
@@ -12,6 +13,7 @@ const ProjectDetails = () => {
   const [logoStyle, setLogoStyle] = useState(null);
   const [projectInfo, setProjectInfo] = useAtom(projectInfoAtom);
   const [fullRealization, setFullRealization] = useAtom(fullRealizationAtom);
+  const [projectLink, setProjectLink] = useAtom(projectLinkAtom);
 
   useEffect(() => {
     switch(projectNumber) {
@@ -41,6 +43,7 @@ const ProjectDetails = () => {
     setProjectNumber("");
     setProjectInfo("");
     setFullRealization("");
+    setProjectLink("");
   }
 
   return (
@@ -72,6 +75,11 @@ const ProjectDetails = () => {
               )) }
             </ul>
           </div>
+        </div>
+        <div className="project-link-container">
+          <a target="_blank" rel="noreferrer"  style={{margin:"-4px"}} href={projectLink}>
+          <img className="link-logo" src={linkLogo} alt="link logo"/>
+          </a>
         </div>
       </div>
     </>
