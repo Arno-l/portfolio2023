@@ -1,6 +1,6 @@
  export var styles = {
     bmBurgerButton: {
-        position: 'fixed',
+        position: 'absolute',
         width: '60px',
         height: '60px',
         right: '35px',

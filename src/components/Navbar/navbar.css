@@ -224,11 +224,27 @@ margin-top: 10px;
 
 /* Screen width of 450px and below */
 @media only screen and (max-width: 450px) {
+  .navbar-links {
+    display: none;
+  }
   #menu-iam {
     font-size: 0.75em !important;
   }
   #menu-name {
     font-size: 0.9em !important;
+  }
+  .bm-menu-wrap {
+    width: 100vw!important;
+  }
+}
+
+/* Screen width between 451px and 751px */
+@media only screen and (min-width: 451px) and (max-width: 751px) {
+  .navbar-links {
+    display: none;
+  }
+  .bm-menu-wrap {
+    width: 60% !important;
   }
 }
 
@@ -252,20 +268,30 @@ margin-top: 10px;
   }
 }
 
-/* Screen width of 751px and below */
-@media only screen and (max-width: 751px) {
-  .navbar-links {
-    display: none;
-  }
-  .bm-menu-wrap {
-    width: 60% !important;
-  }
-}
+
 
 /* Screen width of 751px and above */
 @media only screen and (min-width: 751px) {
   .bm-burger-button {
     display: none;
+  }
+}
+
+/* Screen height max 400px */
+@media only screen and (max-height: 420px) {
+
+  .bm-menu-wrap {
+    height: 100vh!important;
+  }
+}
+
+/* Screen height max 750px */
+@media only screen and (min-height: 421px) and (max-height: 699px) {
+  #typewriter {
+    margin-top: 15px;
+  }
+  .bm-menu-wrap {
+    height: 80vh!important;
   }
 }
 
