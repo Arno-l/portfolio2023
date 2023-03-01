@@ -1,6 +1,6 @@
 import React from "react";
 import "./heroBanner.css";
-import responsiveLogo from "../../assets/images/responsive-logo.png";
+import rudderLogo from "../../assets/images/rudder.png";
 import linkedinLogo from "../../assets/images/linkedin.png";
 import githubLogo from "../../assets/images/github.png";
 import maltLogo from "../../assets/images/malt.png";
@@ -18,7 +18,7 @@ const HeroBanner = () => {
                 ARNAUD
                 </span>
                 <div id="job-container">
-                <img style={{width:"2.5em",height:"2.5em"}} src={responsiveLogo} alt="responsive-logo" /><span id="job"> Développeur web React/RoR</span>
+                <img className="banner-logo" src={rudderLogo} alt="rudder-logo" /><span id="job"> Développeur web React/RoR</span>
                 </div>
                 <div className="social-banner">
                   <a className="social-btn" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/arnaud-lucciarini-9808a0221/" style={{textDecoration:"none"}}><img style={{width:"3em",height:"3em"}} src={linkedinLogo} alt="linkedin-logo"/></a>

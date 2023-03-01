@@ -11,7 +11,7 @@
 
 .navbar {
   min-width: 100vw;
-  height: 10vh;
+  height: 6rem;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -34,14 +34,16 @@
 .navbar-logo-ctn {
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   width: 30%;
+  height: 6rem;
 }
 
 .navbar-logo {
-height: 300px;
-width:300px;
+height: 230px;
+width:230px;
 margin-left: 20px;
+margin-top: 10px;
 }
 
 #navbar-underscore {

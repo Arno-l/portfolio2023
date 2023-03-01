@@ -11,6 +11,7 @@
     flex-direction: column;
     font-family: Montserrat, sans-serif;
     margin-top: 80px;
+    margin-left: 20px;
 }
 
 #iam {
@@ -26,6 +27,7 @@
     border-radius: 5px;
     margin-top: -20px;
 }
+
 
 /* Media Queries */
 
@@ -43,7 +45,7 @@
 
 }
 
-@media only screen and (min-width: 371px) and (max-width: 550px) {
+@media only screen and (min-width: 380px) and (max-width: 600px) {
   #name {
     font-size: 4.2em!important;
   }
@@ -61,7 +63,7 @@
 
 
 /* Screen width of 1199px and below */
-@media only screen and (min-width: 551px) and (max-width: 1199px) {
+@media only screen and (min-width: 600px) and (max-width: 1199px) {
   #name {
     font-size: 6em!important;
   }
@@ -129,6 +131,12 @@
   font-size: 1.2em;
   font-weight:700;
   margin-left: 10px;
+}
+
+.banner-logo {
+  margin-left: 10px;
+  width: 35px;
+  height: 35px;
 }
 
 .social-banner {

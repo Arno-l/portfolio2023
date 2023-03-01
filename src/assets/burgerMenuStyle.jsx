@@ -4,7 +4,7 @@
         width: '60px',
         height: '60px',
         right: '35px',
-        top: '3%'
+        top: '1.3rem'
       },
       bmBurgerBars: {
         background: '#373a47'
