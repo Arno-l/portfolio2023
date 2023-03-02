@@ -23,6 +23,7 @@ const Contact = () => {
 
   return (
     <>
+      <span id="contact-anchor"></span>
       <div className="general-title">
         <h1>CONTACT</h1>
         <div className="line" style={{ width: lineWidth }} />

@@ -38,6 +38,7 @@ const Skills = () => {
 
   return (
     <>
+      <span id="skills-anchor"></span>
       <div className="general-title">
         <h1>COMPÉTENCES</h1>
         <div className="line" style={{ width: lineWidth }} />

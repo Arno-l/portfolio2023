@@ -18,13 +18,13 @@ const ProjectDetails = () => {
   useEffect(() => {
     switch(projectNumber) {
       case 1:
-        setLogoStyle({width: "50%"});
+        setLogoStyle({width: "25%", marginBottom:"20px"});
         break;
       case 2:
-        setLogoStyle({width: "28%"});
+        setLogoStyle({width: "25%", marginBottom:"20px"});
         break;
       case 3:
-        setLogoStyle({width: "25%"});
+        setLogoStyle({width: "25%", marginBottom:"20px"});
         break;
       default:
         setLogoStyle(null);
@@ -48,7 +48,7 @@ const ProjectDetails = () => {
 
   return (
     <>
-      <div className="project-details">
+      <div id="project-details-anchor" className="project-details">
         <div className="close-project-container">
           <img
             onClick={closePopup}

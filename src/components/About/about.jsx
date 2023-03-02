@@ -34,8 +34,9 @@ const About = () => {
 
     return(
         <>
+          <span id="about-anchor"></span>
             <div className="general-title">
-                <h1>A PROPOS</h1>
+                <h1 >A PROPOS</h1>
                 <div  className="line" style={{ width: lineWidth }} />
             </div>  
             <div className="about-container">
@@ -47,6 +48,7 @@ const About = () => {
                 il était temps pour moi de me tourner vers un domaine qui me passionne depuis de nombreuses années.
                 J’ai toujours été curieux et admiratif de ce qui peut être créer avec du code et savoir maintenant l’utiliser me permet de m’épanouir pleinement dans ce métier.
                 </p>
+                <a className="cv-btn">Télécharger CV</a>
             </div>
         </>
     )

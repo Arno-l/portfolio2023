@@ -6,6 +6,7 @@ import { slide as Menu } from "react-burger-menu";
 import { Link } from "react-router-dom";
 import burger from "../../assets/images/burger.svg";
 import { Typewriter } from "react-simple-typewriter";
+import { Scrollchor, easeOutQuad } from "react-scrollchor";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -73,50 +74,48 @@ const Navbar = () => {
               </span>
             </div>
           </Link>
-          <Link
-            to=""
+          <Scrollchor
+            to="#about-anchor"
             onClick={closeMenu}
-            style={{ textDecoration: "none" }}
             className="menu-item"
+            animate={{ duration: 1000, easing: easeOutQuad }}
           >
             <div className="menu-layer">
               <span style={{ marginLeft: "20px" }}>A propos</span>
             </div>
-          </Link>
-          <Link
-            to=""
+          </Scrollchor>
+          <Scrollchor
+            to="#skills-anchor"
             onClick={closeMenu}
-            style={{ textDecoration: "none" }}
             className="menu-item"
           >
             <div className="menu-layer">
               <span style={{ marginLeft: "20px" }}>Compétences</span>
             </div>
-          </Link>
-          <Link
-            to=""
+          </Scrollchor>
+          <Scrollchor
+            to="#projects-anchor"
             onClick={closeMenu}
-            style={{ textDecoration: "none" }}
             className="menu-item"
           >
             <div className="menu-layer">
               <span style={{ marginLeft: "20px" }}>Projets</span>
             </div>
-          </Link>
-          <Link
-            to=""
+          </Scrollchor>
+          <Scrollchor
+            to="#contact-anchor"
             onClick={closeMenu}
-            style={{ textDecoration: "none" }}
             className="menu-item"
           >
             <div className="menu-layer">
               <span style={{ marginLeft: "20px" }}>Contact</span>
             </div>
-          </Link>
+          </Scrollchor>
         </Menu>
 
         <div className="navbar-links">
-          <Link
+          <Scrollchor
+            to="#about-anchor"
             id="about"
             style={{ textDecoration: "none" }}
             className="navbar-link"
@@ -124,34 +123,34 @@ const Navbar = () => {
             <div className="layer">
               <span>A propos</span>
             </div>
-          </Link>
-          <Link
+          </Scrollchor>
+          <Scrollchor
+            to="#skills-anchor"
             id="skills"
-            style={{ textDecoration: "none" }}
             className="navbar-link"
           >
             <div className="layer">
               <span>Compétences</span>
             </div>
-          </Link>
-          <Link
+          </Scrollchor>
+          <Scrollchor
+            to="#projects-anchor"
             id="projects"
-            style={{ textDecoration: "none" }}
             className="navbar-link"
           >
             <div className="layer">
               <span>Projets</span>
             </div>
-          </Link>
-          <Link
+          </Scrollchor>
+          <Scrollchor
+            to="#contact-anchor"
             id="contact"
-            style={{ textDecoration: "none" }}
             className="navbar-link"
           >
             <div className="layer">
               <span>Contact</span>
             </div>
-          </Link>
+          </Scrollchor>
         </div>
       </nav>
     </>

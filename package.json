@@ -18,6 +18,7 @@
     "react-loading-icons": "^1.1.0",
     "react-router-dom": "^6.8.2",
     "react-scripts": "5.0.1",
+    "react-scrollchor": "^7.0.2",
     "react-simple-typewriter": "^5.0.1",
     "sass": "^1.57.1",
     "three": "^0.148.0",

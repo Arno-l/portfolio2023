@@ -17,6 +17,7 @@ import plusLogo from "../../assets/images/+.png";
 import portfolioLogo from "../../assets/images/a.lcci.png";
 import assocLogo from "../../assets/images/logo-assoc.png";
 import scoreitLogo from "../../assets/images/scoreit-logo.png";
+import { Scrollchor, easeOutQuad } from "react-scrollchor";
 
 const Projects = () => {
 
@@ -92,17 +93,24 @@ const Projects = () => {
     document.getElementsByClassName("greying")[0].style.opacity = "0.3";
     document.getElementsByClassName("greying")[0].style.backgroundColor =
       "#484a4a";
+      document.getElementsByClassName("navbar")[0].focus();
   }
+
 
 
   return (
     <>
+      <span id="projects-anchor"></span>
       <div className="general-title">
         <h1>PROJETS</h1>
         <div className="line" style={{ width: lineWidth }} />
       </div>
       <div className="projects-container">
         <div className="project-cards">
+          <Scrollchor
+            to="#project-details-anchor"
+            animate={{ duration: 1000, easing: easeOutQuad }}
+          >
           <div className="project-card" onClick={() => {activePopup(); handleDetails(1)}}>
             <img
               className="screenshot"
@@ -124,6 +132,11 @@ const Projects = () => {
               </div>
             </div>
           </div>
+          </Scrollchor>
+          <Scrollchor
+            to="#project-details-anchor"
+            animate={{ duration: 1000, easing: easeOutQuad }}
+          >
           <div className="project-card" onClick={() => {activePopup(); handleDetails(2)}}>
             <img
               className="screenshot"
@@ -148,6 +161,11 @@ const Projects = () => {
               </div>
             </div>
           </div>
+          </Scrollchor>
+          <Scrollchor
+            to="#project-details-anchor"
+            animate={{ duration: 1000, easing: easeOutQuad }}
+          >
           <div className="project-card" onClick={() => {activePopup(); handleDetails(3)}}>
             <img
               className="screenshot"
@@ -171,6 +189,7 @@ const Projects = () => {
               </div>
             </div>
           </div>
+          </Scrollchor>
         </div>
       </div>
     </>
