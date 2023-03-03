@@ -1,0 +1,83 @@
+.footer-container {
+    width: 100vw;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.footer-links {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.glass-btn {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    margin-left: 1em;
+    margin-right: 1em;  
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+  
+    &.blue-btn {
+
+      &:hover {
+ 
+        .social-logo {
+            transform: scale(1.6);
+            transition: all 0.5s ease-in-out;
+        }
+    }
+
+    }
+  
+    &.red-btn {
+
+      &:hover {
+
+        .social-logo {
+            transform: scale(1.55);
+            transition: all 0.5s ease-in-out;
+        }
+      } 
+    }
+  
+    &.amber-btn {
+ 
+  
+      &:hover {
+
+        .social-logo {
+            transform: scale(1.6);
+            transition: all 0.5s ease-in-out;
+        }
+      }
+    }
+  
+    &:hover {
+      transform: translateY(-10px);
+      transition: all 0.5s;
+    }
+  }
+
+  .reserved {
+    width: 50%;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 0.9em;
+    color: var(--white);
+    padding-bottom: 10px;
+  }
+  
+  #reserved-name {
+    font-family: Montserrat, sans-serifz;
+    color: var(--orange);
+  }
