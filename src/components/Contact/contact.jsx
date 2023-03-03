@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./contact.css";
+import emailjs from '@emailjs/browser';
+
 
 const Contact = () => {
   const [lineWidth, setLineWidth] = useState("0vw");
   const [isOnTargetDiv, setIsOnTargetDiv] = useState(true);
+  const form = useRef();
 
   useEffect(() => {
     function handleScroll() {
@@ -21,6 +24,16 @@ const Contact = () => {
     };
   }, [isOnTargetDiv]);
 
+  function sendEmail(e) {
+    e.preventDefault();
+    emailjs.sendForm('service_1lynk3i', 'template_l7x8s56', e.target, 'sVsj_7QNcD8a-Qu0V')
+    .then((result) => {
+    console.log(result.text);
+    }, (error) => {
+    console.log(error.text);
+    });
+    }
+
   return (
     <>
       <span id="contact-anchor"></span>
@@ -35,10 +48,11 @@ const Contact = () => {
             délais.
           </p>
         </div>
-        <form className="contact-form">
+        <form className="contact-form" onSubmit={sendEmail} ref={form}>
             <input name="name" type="text" className="feedback-input" placeholder="Nom"/>
             <input name="email" type="text" className="feedback-input" placeholder="Email"/>
-            <textarea type="text" name="contact-textarea" className="contact-textarea" placeholder="Votre message..."/>
+            <textarea type="text" name="message" className="contact-textarea" placeholder="Votre message..."/>
+            <input type="submit" className="submit-form-btn" value="Envoyer" />
         </form>
       </div>
     </>

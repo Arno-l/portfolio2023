@@ -7,6 +7,7 @@ import Navbar from "../../components/Navbar/navbar";
 import Projects from "../../components/Projects/projects";
 import ProjectDetails from "../../components/ProjectDetails/projectDetails";
 import Contact from "../../components/Contact/contact";
+import Footer from "../../components/Footer/footer";
 
 const Home = () => {
 
@@ -22,6 +23,7 @@ const Home = () => {
         <Skills/>
         <Projects/>
         <Contact/>
+        <Footer/>
         </div>
         </main>
         </div>

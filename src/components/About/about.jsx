@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 //import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 import "./about.css";
-
+import fileCV from "../../assets/files/CV2023.pdf";
 
 
 const About = () => {
@@ -25,7 +25,30 @@ const About = () => {
       };
     }, [isOnTargetDiv]);
 
+
     /*
+    function downloadPDF() {
+      const pdfUrl = '../../assets/files/CV2023.pdf';
+      fetch(pdfUrl, {
+        headers: {
+          Accept: 'application/pdf'
+        }
+      })
+      .then(response => response.blob())
+      .then(blob => {
+        console.log(blob);
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = "CV2023.pdf";
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+      });
+    };
+    
+
+    
     useScrollPosition(({ prevPos, currPos }) => {
         console.log(currPos.x)
         console.log(currPos.y)
@@ -48,7 +71,7 @@ const About = () => {
                 il était temps pour moi de me tourner vers un domaine qui me passionne depuis de nombreuses années.
                 J’ai toujours été curieux et admiratif de ce qui peut être créer avec du code et savoir maintenant l’utiliser me permet de m’épanouir pleinement dans ce métier.
                 </p>
-                <a className="cv-btn">Télécharger CV</a>
+                <a href={fileCV} download="CV2023" target="_blank" rel="noreferrer" className="cv-btn">Télécharger CV</a>
             </div>
         </>
     )

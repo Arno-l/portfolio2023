@@ -58,12 +58,13 @@
   border-radius: 5px;
   background-color: var(--dark2);
   cursor: pointer;
+  text-decoration: none;
+  color: var(--white);
 }
 
 .cv-btn:hover,
 .cv-btn:focus {
-  color: var(--blue);
-  background-color: var(--white);
+  background-color: var(--blue);
 }
 
 @media only screen and (max-width: 550px) {
