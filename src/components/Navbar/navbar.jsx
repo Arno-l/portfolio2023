@@ -38,8 +38,9 @@ const Navbar = () => {
   return (
     <>
       <nav className={`navbar ${visible ? "navbar-visible" : "navbar-hidden"}`}>
+        
         <div className="navbar-logo-ctn">
-          <img src={myLogo} className="navbar-logo" alt="logo aLDev" />
+        <a href="#"><img src={myLogo} className="navbar-logo" alt="logo aLDev" /></a>
         </div>
 
         <Menu

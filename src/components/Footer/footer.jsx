@@ -29,7 +29,7 @@ const Footer = () => {
                 </div>
                 
                 <div className="reserved">
-                    <p>Copyright All Right Reserved 2023 <span id="reserved-name">Arno-l</span></p>
+                    <p style={{marginBlockEnd:"0",marginBlockStart:"0",marginBlock:"1em"}}>Copyright All Right Reserved 2023 <span id="reserved-name">Arno-l</span></p>
                 </div>
             </div>
         </>

@@ -192,3 +192,21 @@
     }
 }
 
+
+@media only screen and (min-width: 1400px) and (max-width: 1600px) {
+    .project-cards {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 1601px) and (max-width: 2500px) {
+    .project-cards {
+        width: 40%;
+    }
+}
+
+@media only screen and (min-width: 2501px) {
+    .project-cards {
+        width: 30%;
+    }
+}

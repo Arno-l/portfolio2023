@@ -228,10 +228,10 @@ margin-top: 10px;
     display: none;
   }
   #menu-iam {
-    font-size: 0.75em !important;
+    font-size: 1em !important;
   }
   #menu-name {
-    font-size: 0.9em !important;
+    font-size: 1.2em !important;
   }
   .bm-menu-wrap {
     width: 100vw!important;
@@ -251,20 +251,20 @@ margin-top: 10px;
 /* Screen width between 451px and 590px */
 @media only screen and (min-width: 451px) and (max-width: 590px) {
   #menu-iam {
-    font-size: 0.9em !important;
+    font-size: 1em !important;
   }
   #menu-name {
-    font-size: 1.1em !important;
+    font-size: 1.2em !important;
   }
 }
 
 /* Screen width between 591px and 650px */
 @media only screen and (min-width: 591px) and (max-width: 650px) {
   #menu-iam {
-    font-size: 1.1em !important;
+    font-size: 1.3em !important;
   }
   #menu-name {
-    font-size: 1.3em !important;
+    font-size: 1.5em !important;
   }
 }
 
@@ -273,6 +273,9 @@ margin-top: 10px;
 /* Screen width of 751px and above */
 @media only screen and (min-width: 751px) {
   .bm-burger-button {
+    display: none;
+  }
+  .bm-menu-wrap {
     display: none;
   }
 }
