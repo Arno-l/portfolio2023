@@ -23,3 +23,7 @@
     background-image: var(--bg);
     /*overflow-x: hidden;*/
  }
+
+ html {
+   scroll-behavior: smooth;
+ }

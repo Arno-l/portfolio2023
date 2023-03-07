@@ -14,11 +14,19 @@
 }
 
 .line {
+  width: 0vw;
   height: 3px;
   background-color: var(--blue);
   margin-left: 10px;
   transition: width 0.7s ease-in-out;
 }
+
+
+.visible {
+  width: 20vw;
+  transition: width 0.7s ease-in-out;
+}
+
 
 .about-container {
     width:100%;

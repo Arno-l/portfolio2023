@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useSetAtom } from "jotai";
 import { projectLogoAtom, projectNumberAtom, projectInfoAtom, fullRealizationAtom, projectLinkAtom } from "../../store/atoms";
 import "./projects.css";
@@ -21,14 +21,20 @@ import { Scrollchor, easeOutQuad } from "react-scrollchor";
 
 const Projects = () => {
 
-
-  const [lineWidth, setLineWidth] = useState("0vw");
-  const [isOnTargetDiv, setIsOnTargetDiv] = useState(true);
   const setProjectLogo = useSetAtom(projectLogoAtom);
   const setProjectNumber = useSetAtom(projectNumberAtom);
   const setProjectInfo = useSetAtom(projectInfoAtom);
   const setFullRealization = useSetAtom(fullRealizationAtom);
   const setProjectLink = useSetAtom(projectLinkAtom);
+  const [isHovered, setIsHovered] = useState(false);
+
+  function handleHover() {
+    setIsHovered(true);
+  }
+
+  function handleMouseLeave() {
+    setIsHovered(false);
+  }
 
   function handleDetails(number) {
     switch(number) {
@@ -59,33 +65,7 @@ const Projects = () => {
     }
   }
 
-  useEffect(() => {
-    function handleScroll() {
-      if (window.innerWidth < 440 && window.scrollY > 2500) {
-        setLineWidth("20vw");
-        setIsOnTargetDiv(true);
-      } else if ((window.innerWidth > 900 && window.innerWidth < 1200) && window.scrollY > 2000 && window.scrollY < 3200) {
-        setLineWidth("20vw");
-        setIsOnTargetDiv(true);
-       } else if ((window.innerWidth > 1200 && window.innerWidth < 2000) && window.scrollY > 1700 && window.scrollY < 3200) {
-        setLineWidth("20vw");
-        setIsOnTargetDiv(true);
-       } else if (window.innerWidth > 2000 && window.scrollY > 1400 && window.scrollY < 2500) {
-        setLineWidth("20vw");
-        setIsOnTargetDiv(true);
-      } else if (window.innerWidth > 440 && window.scrollY > 2300 && window.scrollY < 2500) {
-        setLineWidth("20vw");
-        setIsOnTargetDiv(true);
-      } else if (isOnTargetDiv) {
-        setLineWidth("0vw");
-        setIsOnTargetDiv(false);
-      }
-    }
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [isOnTargetDiv]);
+
 
   function activePopup() {
     document.getElementsByClassName("project-details")[0].style.display =
@@ -103,9 +83,9 @@ const Projects = () => {
       <span id="projects-anchor"></span>
       <div className="general-title">
         <h1>PROJETS</h1>
-        <div className="line" style={{ width: lineWidth }} />
+        <div className={`line ${isHovered ? 'visible' : ''}`} />
       </div>
-      <div className="projects-container">
+      <div className="projects-container" onMouseEnter={handleHover} onMouseLeave={handleMouseLeave}>
         <div className="project-cards">
           <Scrollchor
             to="#project-details-anchor"
