@@ -1,4 +1,4 @@
-import React, {useState } from "react";
+import React, {useState, useEffect } from "react";
 import "./contact.css";
 import emailjs from '@emailjs/browser';
 import { toast } from "react-toastify";
@@ -7,14 +7,30 @@ import { redirect } from "react-router-dom";
 const Contact = () => {
 
   const [isHovered, setIsHovered] = useState(false);
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
 
-  function handleHover() {
-    setIsHovered(true);
-  }
+  useEffect(() => {
+    setIsTouchDevice("ontouchstart" in window);
+  }, []);
 
-  function handleMouseLeave() {
-    setIsHovered(false);
-  }
+
+  const handleMouseEnter = () => {
+    if (!isTouchDevice) {
+      setIsHovered(true);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (!isTouchDevice) {
+      setIsHovered(false);
+    }
+  };
+
+  const handleClick = () => {
+    if (isTouchDevice) {
+      setIsHovered(!isHovered);
+    }
+  };
 
   function successNotify() {
     toast.success("Message envoyé 📬", {
@@ -66,37 +82,32 @@ const Contact = () => {
   
 
   function sendEmail(e) {
+    e.preventDefault();
     let name = e.target.elements.name.value;
     let email = e.target.elements.email.value;
     let message = e.target.elements.message.value;
   
     if (!name) {
       errorNameNotify();
-      e.preventDefault();
       return;
     }
     if (!email || !/\S+@\S+\.\S+/.test(email)) {
       errorMailNotify();
-      e.preventDefault();
       return;
     }
     if (!message) {
       errorMessageNotify();
-      e.preventDefault();
       return;
     }
-    successNotify();
-    redirect("/");
-    e.preventDefault();
   
-    /*
     emailjs.sendForm('service_1lynk3i', 'template_l7x8s56', e.target, 'sVsj_7QNcD8a-Qu0V')
     .then((result) => {
     console.log(result.text);
+    successNotify();
+    e.target.reset();
     }, (error) => {
     console.log(error.text);
     });
-    */
     }
 
   return (
@@ -106,7 +117,7 @@ const Contact = () => {
         <h1>CONTACT</h1>
         <div className={`line ${isHovered ? 'visible' : ''}`} />
       </div>
-      <div className="contact-container" onMouseEnter={handleHover} onMouseLeave={handleMouseLeave}>
+      <div className="contact-container" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={handleClick}>
         <div className="contact-intro">
           <p>
             N'hésitez pas à me contacter, je vous répondrai dans les plus brefs
