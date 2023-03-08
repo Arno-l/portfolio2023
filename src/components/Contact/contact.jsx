@@ -8,6 +8,7 @@ const Contact = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [isTouchDevice, setIsTouchDevice] = useState(false);
 
+  
   useEffect(() => {
     setIsTouchDevice("ontouchstart" in window);
   }, []);
