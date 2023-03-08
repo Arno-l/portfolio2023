@@ -8,7 +8,7 @@ const Contact = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [isTouchDevice, setIsTouchDevice] = useState(false);
 
-  
+
   useEffect(() => {
     setIsTouchDevice("ontouchstart" in window);
   }, []);
@@ -39,6 +39,8 @@ const Contact = () => {
     setIsHovered(true);
     document.removeEventListener('touchmove', handleTouchMove);
   };
+
+
 
   function successNotify() {
     toast.success("Message envoyé 📬", {
@@ -125,7 +127,7 @@ const Contact = () => {
         <h1>CONTACT</h1>
         <div className={`line ${isHovered ? 'visible' : ''}`} />
       </div>
-      <div className="contact-container" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={handleClick}>
+      <div className="contact-container" onTouchMove={handleTouchMove} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
         <div className="contact-intro">
           <p>
             N'hésitez pas à me contacter, je vous répondrai dans les plus brefs
