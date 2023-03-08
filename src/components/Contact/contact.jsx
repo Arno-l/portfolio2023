@@ -2,7 +2,6 @@ import React, {useState, useEffect } from "react";
 import "./contact.css";
 import emailjs from '@emailjs/browser';
 import { toast } from "react-toastify";
-import { redirect } from "react-router-dom";
 
 const Contact = () => {
 
@@ -12,6 +11,15 @@ const Contact = () => {
   useEffect(() => {
     setIsTouchDevice("ontouchstart" in window);
   }, []);
+
+  useEffect(() => {
+    if (isTouchDevice) {
+      document.addEventListener('touchmove', handleTouchMove);
+    }
+    return () => {
+      document.removeEventListener('touchmove', handleTouchMove);
+    };
+  }, [isTouchDevice]);
 
 
   const handleMouseEnter = () => {
@@ -26,10 +34,9 @@ const Contact = () => {
     }
   };
 
-  const handleClick = () => {
-    if (isTouchDevice) {
-      setIsHovered(!isHovered);
-    }
+  const handleTouchMove = () => {
+    setIsHovered(true);
+    document.removeEventListener('touchmove', handleTouchMove);
   };
 
   function successNotify() {
