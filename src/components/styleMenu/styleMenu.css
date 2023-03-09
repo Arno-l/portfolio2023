@@ -1,22 +1,57 @@
+@keyframes rotation {
+    from {
+      transform: rotate(0deg); /* La rotation commence à 0 degrés */
+    }
+    to {
+      transform: rotate(360deg); /* La rotation se termine à 360 degrés (une rotation complète) */
+    }
+  }
+
 .style-menu {
     position: fixed;
-    width: 50%;
-    left: -45%;
-    top: 6rem;
-    height: 20vh;
+    width: 18%;
+    left: -16.1%;
+    top: 10rem;
+    height: 40vh;
     transition: all 0.5s ease-in-out;
     display: flex;
 }
 
 .style-expanded {
     transition: all 0.5s ease-in-out;
-    transform: translateX(+90%);
+    transform: translateX(+89.5%);
 }
 
 .style-changer {
     height: 100%;
     width: 90%;
+    display: flex;
+    flex-direction: column;
     background-color: var(--dark);
+}
+
+.switcher-title {
+    font-family: Roboto, sans-serif;
+    color: var(--white);
+    font-weight: 500;
+    margin-left: 35px;
+}
+
+.switcher-subtitle {
+    font-family: Roboto, sans-serif;
+    color: var(--logo);
+    font-weight: 400;
+    font-size: 0.9em;
+    margin-left: 35px;
+}
+
+.switcher-line {
+    width: 80%;
+    height: 1px;
+    background-color: var(--logo);
+    opacity: 0.1;
+    margin-left: 35px;
+    margin-top: -7px;
 }
 
 .style-opener {
@@ -26,7 +61,12 @@
 
 .gap1 {
     width: 100%;
-    height: 20%;
+    height: 10%;
+}
+
+.gap2 {
+    width: 100%;
+    height: 70%;
 }
 
 .opener-container {
@@ -39,24 +79,54 @@
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     cursor: pointer;
+    margin-left: -1px;
 }
 
-@keyframes rotation {
-    from {
-      transform: rotate(0deg); /* La rotation commence à 0 degrés */
-    }
-    to {
-      transform: rotate(360deg); /* La rotation se termine à 360 degrés (une rotation complète) */
-    }
-  }
-
 .opener-logo {
-    width: 42.5px;
-    height: 42.5px;
+    width: 100%;
+    height: auto;
     animation: rotation 2s infinite linear; 
 }
 
-.gap2 {
-    width: 100%;
-    height: 60%;
+.colors-container {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(4, 3.2em);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin-left: 35px;
+
+}
+
+.color-box {
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.style-container {
+    box-sizing: border-box;
+    display: flex;
+    margin-left: 35px;
+}
+
+.style-btn {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px var(--logo);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.style-logo {
+    width: 70%;
+    height: auto;
+}
+
+.style-btn:hover {
+    background-color: var(--dark-light);
 }
