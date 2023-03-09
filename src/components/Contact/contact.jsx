@@ -6,39 +6,16 @@ import { toast } from "react-toastify";
 const Contact = () => {
 
   const [isHovered, setIsHovered] = useState(false);
-  const [isTouchDevice, setIsTouchDevice] = useState(false);
-
-
-  useEffect(() => {
-    setIsTouchDevice("ontouchstart" in window);
-  }, []);
-
-  useEffect(() => {
-    if (isTouchDevice) {
-      document.addEventListener('touchmove', handleTouchMove);
-    }
-    return () => {
-      document.removeEventListener('touchmove', handleTouchMove);
-    };
-  }, [isTouchDevice]);
 
 
   const handleMouseEnter = () => {
-    if (!isTouchDevice) {
       setIsHovered(true);
-    }
   };
 
   const handleMouseLeave = () => {
-    if (!isTouchDevice) {
       setIsHovered(false);
-    }
   };
 
-  const handleTouchMove = () => {
-    setIsHovered(true);
-    document.removeEventListener('touchmove', handleTouchMove);
-  };
 
 
 
@@ -127,7 +104,7 @@ const Contact = () => {
         <h1>CONTACT</h1>
         <div className={`line ${isHovered ? 'visible' : ''}`} />
       </div>
-      <div className="contact-container" onTouchMove={handleTouchMove} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
+      <div className="contact-container" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
         <div className="contact-intro">
           <p>
             N'hésitez pas à me contacter, je vous répondrai dans les plus brefs

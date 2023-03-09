@@ -149,9 +149,7 @@ margin-top: 10px;
   display: none;
 }
 
-.bm-menu-wrap {
-  font-family: Montserrat, sans-serif;
-}
+
 
 .bm-item-list a:first-child {
   background-color: var(--white);

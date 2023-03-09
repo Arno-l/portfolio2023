@@ -23,7 +23,8 @@
         position: 'fixed',
         top: '0px',
         height: '60%',
-        width: '60%'
+        width: '60%',
+        fontFamily: 'Montserrat, sans-serif'
       },
       bmMenu: {
         background: '#373a47',
@@ -48,7 +49,8 @@
         display: 'inline-block',
         padding: "30px",
         width: "100%",
-        height:"100%"
+        height:"100%",
+        fontWeight:"500"
       },
       bmOverlay: {
         background: 'rgba(0, 0, 0, 0.3)',

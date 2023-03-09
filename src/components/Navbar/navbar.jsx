@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import burger from "../../assets/images/burger.svg";
 import { Typewriter } from "react-simple-typewriter";
 import { Scrollchor, easeOutQuad } from "react-scrollchor";
+import StyleMenu from "../styleMenu/styleMenu";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -154,6 +155,7 @@ const Navbar = () => {
           </Scrollchor>
         </div>
       </nav>
+      <StyleMenu/>
     </>
   );
 };
