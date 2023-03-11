@@ -47,7 +47,7 @@
 
 .feedback-input:hover,
 .feedback-input:focus {
-  border-color: var(--blue);
+  border-color: var(--selected-color);
 }
 
 .contact-textarea {
@@ -72,7 +72,7 @@
 
 .contact-textarea:hover,
 .contact-textarea:focus {
-  border-color: var(--blue);
+  border-color: var(--selected-color);
 }
 
 .submit-form-btn {
@@ -81,7 +81,7 @@
   margin-top: 20px;
   margin-bottom: 40px;
   padding: 10px;
-  border: solid 1px var(--blue);
+  border: solid 1px var(--selected-color);
   border-radius: 5px;
   background-color: var(--dark2);
   cursor: pointer;
@@ -90,7 +90,7 @@
 
 .submit-form-btn:hover,
 .submit-form-btn:focus {
-  background-color: var(--blue);
+  background-color: var(--selected-color);
 }
 
 @media only screen and (min-width: 2000px) {

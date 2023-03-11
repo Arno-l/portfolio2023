@@ -16,7 +16,7 @@
 .line {
   width: 0vw;
   height: 3px;
-  background-color: var(--blue);
+  background-color: var(--selected-color);
   margin-left: 10px;
   transition: width 0.7s ease-in-out;
 }
@@ -48,7 +48,7 @@
 }
 
 .text-link {
-  color: var(--orange);
+  color: var(--selected-color);
   text-decoration: none;
   padding: 3px;
 }
@@ -62,7 +62,7 @@
   font-size: 1.7em;
   margin-top: 50px;
   padding: 10px;
-  border: solid 1px var(--blue);
+  border: solid 1px var(--selected-color);
   border-radius: 5px;
   background-color: var(--dark2);
   cursor: pointer;
@@ -72,7 +72,7 @@
 
 .cv-btn:hover,
 .cv-btn:focus {
-  background-color: var(--blue);
+  background-color: var(--selected-color);
 }
 
 @media only screen and (max-width: 550px) {

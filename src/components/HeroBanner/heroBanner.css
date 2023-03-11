@@ -184,7 +184,7 @@
 }
 
 #job {
-  color: var(--blue);
+  color: var(--selected-color);
   font-family: Montserrat, sans-serif;
   font-size: 1.2em;
   font-weight:700;

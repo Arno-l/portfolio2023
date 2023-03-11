@@ -1,5 +1,7 @@
 import React, {useState} from "react";
 import "./styleMenu.css";
+import { useSetAtom } from "jotai";
+import { selectedColorAtom } from "../../store/atoms";
 import settingsLogo from "../../assets/images/settings-blue.png";
 import moonLogo from "../../assets/images/moon.png";
 import sunLogo from "../../assets/images/sun.png";
@@ -7,9 +9,14 @@ import sunLogo from "../../assets/images/sun.png";
 const StyleMenu = () => {
 
     const [isExpanded, setIsExpanded] = useState(false);
+    const setSelectedColor = useSetAtom(selectedColorAtom);
 
     function handleStyleMenu() {
         setIsExpanded(!isExpanded);
+    }
+
+    function handleColor(color) {
+        document.documentElement.style.setProperty("--selected-color", color);
     }
 
     return (
@@ -20,18 +27,18 @@ const StyleMenu = () => {
                 <div className="switcher-line"/>
                 <h4 className="switcher-subtitle">COULEUR THEME</h4>
                 <div className="colors-container">
-                    <div className="color-box" style={{backgroundColor:"#298dd4"}}/>
-                    <div className="color-box" style={{backgroundColor:"#d03c3c"}}/>
-                    <div className="color-box" style={{backgroundColor:"#5dd495"}}/>
-                    <div className="color-box" style={{backgroundColor:"#fffa58"}} />
-                    <div className="color-box" style={{backgroundColor:"#00958e"}}/>
-                    <div className="color-box" style={{backgroundColor:"#b898ea"}}/>
-                    <div className="color-box" style={{backgroundColor:"#f89934"}}/>
-                    <div className="color-box" style={{backgroundColor:"#ef68e4"}}/>
-                    <div className="color-box" style={{backgroundColor:"#8070ff"}}/>
-                    <div className="color-box" style={{backgroundColor:"#5c78ff"}}/>
-                    <div className="color-box" style={{backgroundColor:"#20dad8"}}/>
-                    <div className="color-box" style={{backgroundColor:"#ff663f"}}/>
+                    <div className="color-box" onClick={() => handleColor("#298dd4")} style={{backgroundColor:"#298dd4"}}/>
+                    <div className="color-box" onClick={() => handleColor("#d03c3c")} style={{backgroundColor:"#d03c3c"}}/>
+                    <div className="color-box" onClick={() => handleColor("#5dd495")} style={{backgroundColor:"#5dd495"}}/>
+                    <div className="color-box" onClick={() => handleColor("#fffa58")} style={{backgroundColor:"#fffa58"}} />
+                    <div className="color-box" onClick={() => handleColor("#00958e")} style={{backgroundColor:"#00958e"}}/>
+                    <div className="color-box" onClick={() => handleColor("#b898ea")} style={{backgroundColor:"#b898ea"}}/>
+                    <div className="color-box" onClick={() => handleColor("#f89934")} style={{backgroundColor:"#f89934"}}/>
+                    <div className="color-box" onClick={() => handleColor("#ef68e4")} style={{backgroundColor:"#ef68e4"}}/>
+                    <div className="color-box" onClick={() => handleColor("#8070ff")} style={{backgroundColor:"#8070ff"}}/>
+                    <div className="color-box" onClick={() => handleColor("#5c78ff")} style={{backgroundColor:"#5c78ff"}}/>
+                    <div className="color-box" onClick={() => handleColor("#20dad8")} style={{backgroundColor:"#20dad8"}}/>
+                    <div className="color-box" onClick={() => handleColor("#ff663f")} style={{backgroundColor:"#ff663f"}}/>
                 </div>
                 <div className="switcher-line" style={{marginTop:"25px"}}/>
                 <h4 className="switcher-subtitle">STYLE THEME</h4>

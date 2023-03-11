@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./navbar.css";
 import myLogo from "../../assets/images/a.lcci.png";
-import { styles } from "../../assets/burgerMenuStyle";
+import { styles } from "./burgerMenuStyle";
 import { slide as Menu } from "react-burger-menu";
 import { Link } from "react-router-dom";
 import burger from "../../assets/images/burger.svg";

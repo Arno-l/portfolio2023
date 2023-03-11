@@ -46,7 +46,7 @@
 }
 
 .project-title {
-    color: var(--orange);
+    color: var(--selected-color);
     font-family: Montserrat, sans-serif;
     position: absolute;
     top: 10%;
@@ -76,7 +76,7 @@
     left:50%;
     width: 0%;
     height: 2.5px;
-    background-color: var(--orange);
+    background-color: var(--selected-color);
     transition: width 0.5s ease-in-out;
     transform: translate(-50%, -50%);
 }

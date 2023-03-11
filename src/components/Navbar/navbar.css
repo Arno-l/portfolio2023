@@ -126,7 +126,7 @@ margin-top: 10px;
 
 .layer:hover,
 .layer:focus {
-  box-shadow: inset 50em 0 0 0 var(--blue);
+  box-shadow: inset 50em 0 0 0 var(--selected-color);
 }
 
 @keyframes blinker {
@@ -202,13 +202,13 @@ margin-top: 10px;
 
 .menu-layer:hover,
 .menu-layer:focus {
-  box-shadow: inset 40em 0 0 0 var(--blue);
+  box-shadow: inset 40em 0 0 0 var(--selected-color);
   font-weight: 500;
 }
 
 #menu-iam {
   font-weight: 600;
-  color: var(--blue);
+  color: var(--selected-color);
   margin-left: -12px !important;
 }
 

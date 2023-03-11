@@ -7,7 +7,7 @@
         top: '1.3rem'
       },
       bmBurgerBars: {
-        background: '#373a47'
+        background: 'var(--selected-color)'
       },
       bmBurgerBarsHover: {
         background: '#a90000'
