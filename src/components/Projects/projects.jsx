@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { useSetAtom } from "jotai";
-import { projectLogoAtom, projectNumberAtom, projectInfoAtom, fullRealizationAtom, projectLinkAtom } from "../../store/atoms";
+import { useSetAtom, useAtomValue } from "jotai";
+import { projectLogoAtom, projectNumberAtom, projectInfoAtom, fullRealizationAtom, projectLinkAtom, activeTabAtom } from "../../store/atoms";
 import "./projects.css";
 import portfolioScreen from "../../assets/images/portfolio-screen.png";
 import clvScreen from "../../assets/images/clv-screen.png";
@@ -26,6 +26,7 @@ const Projects = () => {
   const setProjectInfo = useSetAtom(projectInfoAtom);
   const setFullRealization = useSetAtom(fullRealizationAtom);
   const setProjectLink = useSetAtom(projectLinkAtom);
+  const activeTab = useAtomValue(activeTabAtom);
   const [isHovered, setIsHovered] = useState(false);
 
   function handleHover() {
@@ -70,10 +71,11 @@ const Projects = () => {
   function activePopup() {
     document.getElementsByClassName("project-details")[0].style.display =
       "flex";
-    document.getElementsByClassName("greying")[0].style.opacity = "0.3";
-    document.getElementsByClassName("greying")[0].style.backgroundColor =
-      "#484a4a";
-      document.getElementsByClassName("navbar")[0].focus();
+
+    const body = document.querySelector('body');
+    body.style.opacity = '0.3';
+
+    document.getElementsByClassName("navbar")[0].focus();
   }
 
 
@@ -81,7 +83,7 @@ const Projects = () => {
   return (
     <>
       <span id="projects-anchor"></span>
-      <div className="general-title">
+      <div className={`general-title ${activeTab === 2 ? 'text-light' : ''}`}>
         <h1>PROJETS</h1>
         <div className={`line ${isHovered ? 'visible' : ''}`} />
       </div>

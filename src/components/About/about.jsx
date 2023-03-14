@@ -1,11 +1,14 @@
 import React, {useState} from "react";
 import "./about.css";
+import { useAtomValue } from "jotai";
+import { activeTabAtom } from "../../store/atoms";
 import fileCV from "../../assets/files/CV2023.pdf";
 
 
 const About = () => {
   
   const [isHovered, setIsHovered] = useState(false);
+  const activeTab = useAtomValue(activeTabAtom);
 
   function handleHover() {
     setIsHovered(true);
@@ -18,11 +21,11 @@ const About = () => {
   return (
     <>
       <span id="about-anchor"></span>
-      <div className="general-title">
+      <div className={`general-title ${activeTab === 2 ? 'text-light' : ''}`}>
         <h1>A PROPOS</h1>
         <div className={`line ${isHovered ? 'visible' : ''}`} />
       </div>
-      <div className="about-container" onMouseEnter={handleHover} onMouseLeave={handleMouseLeave}>
+      <div className={`about-container ${activeTab === 2 ? 'text-light' : ''}`} onMouseEnter={handleHover} onMouseLeave={handleMouseLeave}>
         <p className="about-text">
           Bonjour moi c'est Arnaud, développeur web curieux, rigoureux et
           autonome. En janvier 2022, j'ai entamé une reconversion dans le

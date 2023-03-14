@@ -1,12 +1,14 @@
-import React, {useState, useEffect } from "react";
+import React, {useState} from "react";
 import "./contact.css";
+import { useAtomValue } from "jotai";
+import { activeTabAtom } from "../../store/atoms";
 import emailjs from '@emailjs/browser';
 import { toast } from "react-toastify";
 
 const Contact = () => {
 
   const [isHovered, setIsHovered] = useState(false);
-
+  const activeTab = useAtomValue(activeTabAtom);
 
   const handleMouseEnter = () => {
       setIsHovered(true);
@@ -100,21 +102,21 @@ const Contact = () => {
   return (
     <>
       <span id="contact-anchor"></span>
-      <div className="general-title">
+      <div className={`general-title ${activeTab === 2 ? 'text-light' : ''}`}>
         <h1>CONTACT</h1>
         <div className={`line ${isHovered ? 'visible' : ''}`} />
       </div>
       <div className="contact-container" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
-        <div className="contact-intro">
+        <div className={`contact-intro ${activeTab === 2 ? 'text-light' : ''}`}>
           <p>
             N'hésitez pas à me contacter, je vous répondrai dans les plus brefs
             délais.
           </p>
         </div>
         <form className="contact-form" onSubmit={sendEmail}>
-            <input name="name" type="text" className="feedback-input" placeholder="Nom"/>
-            <input name="email" type="text" className="feedback-input" placeholder="Email"/>
-            <textarea type="text" name="message" className="contact-textarea" placeholder="Votre message..."/>
+            <input name="name" type="text" className={`feedback-input ${activeTab === 2 ? 'text-light' : ''}`} placeholder="Nom"/>
+            <input name="email" type="text" className={`feedback-input ${activeTab === 2 ? 'text-light' : ''}`} placeholder="Email"/>
+            <textarea type="text" name="message" className={`contact-textarea ${activeTab === 2 ? 'text-light' : ''}`} placeholder="Votre message..."/>
             <input type="submit" className="submit-form-btn" value="Envoyer" />
         </form>
       </div>

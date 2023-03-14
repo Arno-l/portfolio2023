@@ -7,6 +7,10 @@
   background-attachment: fixed;
 }
 
+.bg-img-light {
+  background-image: url("../../assets/images/pikrepo3.png");
+}
+
 /*-------------------- NAVBAR -----------------------------------------*/
 
 .navbar {

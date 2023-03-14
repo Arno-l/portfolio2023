@@ -13,8 +13,15 @@
     --dark : #121111;
     --dark2 : #000000;
     --dark-light : #373a47b3;
-    --logo: #dfdbdb;
+    --logo: #bbb7b7;
     --selected-color: #298dd4;
+ }
+
+ * {
+   transition: background-image 0.5s ease-in-out;
+   transition: background 0.5s ease-in-out;
+   transition: background-color 0.5s ease-in-out;
+   transition: color 0.5s ease-in-out;
  }
 
  body {
@@ -23,6 +30,17 @@
     text-rendering: optimizeLegibility;
     background-image: var(--bg);
     /*overflow-x: hidden;*/
+ }
+
+ .body-light {
+   background-image: linear-gradient(to top, #e0e0e0, #d1d1d1)!important;
+ }
+
+ .bg-light {
+   background-color: var(--logo)!important;
+ }
+ .text-light {
+   color: var(--dark2)!important;
  }
 
  html {

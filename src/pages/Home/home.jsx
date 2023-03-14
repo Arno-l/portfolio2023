@@ -20,7 +20,6 @@ const Home = () => {
         <ProjectDetails/>
         <div id="outer-container">
         <main id="page-wrap">
-        <div className="greying">
         <Navbar/>
         <HeroBanner/>
         <About/>
@@ -28,7 +27,6 @@ const Home = () => {
         <Projects/>
         <Contact/>
         <Footer/>
-        </div>
         </main>
         </div>
         </>

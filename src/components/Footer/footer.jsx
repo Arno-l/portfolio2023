@@ -1,11 +1,15 @@
 import React from "react";
 import "./footer.scss";
+import { useAtomValue } from "jotai";
+import { activeTabAtom } from "../../store/atoms";
 import linkedinLogo from "../../assets/images/linkedin2.png";
 import maltLogo from "../../assets/images/malt.png";
 import githubLogo from "../../assets/images/github.png";
 
 
 const Footer = () => {
+
+    const activeTab = useAtomValue(activeTabAtom);
 
     return (
         <>
@@ -28,7 +32,7 @@ const Footer = () => {
                 </div>
                 </div>
                 
-                <div className="reserved">
+                <div className={`reserved ${activeTab === 2 ? 'text-light' : ''}`}>
                     <p style={{marginBlockEnd:"0",marginBlockStart:"0",marginBlock:"1em"}}>Copyright All Right Reserved 2023 <span id="reserved-name">@rnaud-l</span></p>
                 </div>
             </div>

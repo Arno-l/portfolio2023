@@ -1,5 +1,7 @@
 import React from "react";
 import "./heroBanner.css";
+import { useAtomValue } from "jotai";
+import { activeTabAtom } from "../../store/atoms";
 import rudderLogo from "../../assets/images/rudder.png";
 import linkedinLogo from "../../assets/images/linkedin.png";
 import githubLogo from "../../assets/images/github.png";
@@ -7,14 +9,16 @@ import maltLogo from "../../assets/images/malt.png";
 
 
 const HeroBanner = () => {
+
+    const activeTab = useAtomValue(activeTabAtom);
   
     return(
         <>
-            <div className="bg-img">
+            <div className={`bg-img ${activeTab === 2 ? 'bg-img-light' : ''}`}>
             <div className="banner-container">
             <div className="banner-text">
-            <h1 id="iam">&nbsp;Hi, I'&nbsp;Am&nbsp;</h1>
-                <span id="name">
+            <h1 className={`iam ${activeTab === 2 ? 'text-light' : ''}`}>&nbsp;Hi, I'&nbsp;Am&nbsp;</h1>
+                <span className={`name ${activeTab === 2 ? 'text-light' : ''}`}>
                 ARNAUD
                 </span>
                 <div id="job-container">

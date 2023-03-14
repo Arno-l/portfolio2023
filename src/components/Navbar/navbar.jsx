@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./navbar.css";
-//import myLogo from "../../assets/images/a.lcci.png";
 import { styles } from "./burgerMenuStyle";
 import { slide as Menu } from "react-burger-menu";
 import { Link } from "react-router-dom";
@@ -9,7 +8,7 @@ import { Typewriter } from "react-simple-typewriter";
 import { Scrollchor, easeOutQuad } from "react-scrollchor";
 import StyleMenu from "../styleMenu/styleMenu";
 import { useAtomValue } from "jotai";
-import { colorNumberAtom } from "../../store/atoms";
+import { colorNumberAtom, activeTabAtom } from "../../store/atoms";
 import logo1 from "../../assets/images/a.lcci-1.png";
 import logo2 from "../../assets/images/a.lcci-2.png";
 import logo3 from "../../assets/images/a.lcci-3.png";
@@ -30,6 +29,7 @@ const Navbar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
   const colorNumber = useAtomValue(colorNumberAtom);
+  const activeTab = useAtomValue(activeTabAtom);
   const logo = colorNumber === 1 ? logo1 : colorNumber === 2 ? logo2 : colorNumber === 3 ? logo3 : colorNumber === 4 ? logo4 : colorNumber === 5 ? logo5 : colorNumber === 6 ? logo6 : colorNumber === 7 ? logo7 : colorNumber === 8 ? logo8 : colorNumber === 9 ? logo9 : colorNumber === 10 ? logo10 : colorNumber === 11 ? logo11 : colorNumber === 12 ? logo12 : null;
 
   useEffect(() => {
@@ -56,7 +56,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className={`navbar ${visible ? "navbar-visible" : "navbar-hidden"}`}>
+      <nav className={`navbar ${visible && activeTab === 1 ? "navbar-visible" : visible && activeTab === 2 ? "navbar-visible bg-light": "navbar-hidden"}`}>
         
         <div className="navbar-logo-ctn">
         <a href="#"><img src={logo} className="navbar-logo" alt="logo portfolio" /></a>

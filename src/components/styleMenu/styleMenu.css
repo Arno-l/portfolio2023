@@ -132,8 +132,9 @@
   height: auto;
 }
 
-.style-btn:hover {
-  background-color: var(--dark-light);
+.style-btn:hover,
+.active {
+  background-color: var(--selected-color);
 }
 
 @media only screen and (min-width: 2700px) {

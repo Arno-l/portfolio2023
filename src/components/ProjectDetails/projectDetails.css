@@ -9,6 +9,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  opacity: 1!important;
+}
+
+.show {
+  display: flex;
 }
 
 .close-project-container {

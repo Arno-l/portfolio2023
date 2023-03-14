@@ -6,3 +6,4 @@ export const projectInfoAtom = atom("");
 export const fullRealizationAtom = atom("");
 export const projectLinkAtom = atom("");
 export const colorNumberAtom = atom(1);
+export const activeTabAtom = atom(1);

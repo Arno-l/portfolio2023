@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./skills.css";
+import { useAtomValue } from "jotai";
+import { activeTabAtom } from "../../store/atoms";
 import rubyLogo from "../../assets/images/skills-ruby.png";
 import railsLogo from "../../assets/images/rails.png";
 import pgLogo from "../../assets/images/pg.png";
@@ -14,6 +16,7 @@ import gitLogo from "../../assets/images/git.png";
 const Skills = () => {
 
   const [isHovered, setIsHovered] = useState(false);
+  const activeTab = useAtomValue(activeTabAtom);
 
   function handleHover() {
     setIsHovered(true);
@@ -26,12 +29,12 @@ const Skills = () => {
   return (
     <>
       <span id="skills-anchor"></span>
-      <div className="general-title">
+      <div className={`general-title ${activeTab === 2 ? 'text-light' : ''}`}>
         <h1>COMPÉTENCES</h1>
         <div className={`line ${isHovered ? 'visible' : ''}`} />
       </div>
       <div className="skills-container" onMouseEnter={handleHover} onMouseLeave={handleMouseLeave}>
-        <p className="skills-intro">
+        <p className={`skills-intro ${activeTab === 2 ? 'text-light' : ''}`}>
           Elles sont en constantes améliorations car pour moi la joie de ce
           métier fait que l’on en apprend tous les jours, d’autant plus en étant
           impliqué, curieux et passionné.
