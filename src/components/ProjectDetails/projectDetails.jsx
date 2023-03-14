@@ -38,7 +38,6 @@ const ProjectDetails = () => {
     document.getElementsByClassName("greying")[0].style.opacity = "1";
     document.getElementsByClassName("greying")[0].style.background =
       "linear-gradient(to top, #031014, #000312)";
-      console.log(typeof fullRealization);
     setProjectLogo("");
     setProjectNumber("");
     setProjectInfo("");

@@ -149,7 +149,9 @@ margin-top: 10px;
   display: none;
 }
 
-
+.bm-cross {
+  background: var(--selected-color)!important;
+}
 
 .bm-item-list a:first-child {
   background-color: var(--white);

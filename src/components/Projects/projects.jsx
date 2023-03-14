@@ -14,7 +14,7 @@ import sassLogo from "../../assets/images/sass.png";
 import rubyLogo from "../../assets/images/skills-ruby.png";
 import railsLogo from "../../assets/images/rails.png";
 import plusLogo from "../../assets/images/+.png";
-import portfolioLogo from "../../assets/images/a.lcci.png";
+import portfolioLogo from "../../assets/images/a.lcci-1.png";
 import assocLogo from "../../assets/images/logo-assoc.png";
 import scoreitLogo from "../../assets/images/scoreit-logo.png";
 import { Scrollchor, easeOutQuad } from "react-scrollchor";

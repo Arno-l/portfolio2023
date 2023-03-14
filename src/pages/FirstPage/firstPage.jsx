@@ -1,9 +1,7 @@
 import React, { useEffect, useState} from "react";
 import "./firstPage.css";
 import { useNavigate } from "react-router-dom";
-//import Logo from "../../components/Logo/logo";
-//import { Canvas } from 'react-three-fiber';
-import myLogo from "../../assets/images/a.lcci.png";
+import myLogo from "../../assets/images/a.lcci-1.png";
 import  AOS  from 'aos';
 import "aos/dist/aos.css";
 import LoadingIcons from 'react-loading-icons';

@@ -1,7 +1,5 @@
 import React, {useEffect} from "react";
 import "./home.css";
-import { useAtomValue } from "jotai";
-import { selectedColorAtom } from "../../store/atoms";
 import HeroBanner from "../../components/HeroBanner/heroBanner";
 import About from "../../components/About/about";
 import Skills from "../../components/Skills/skills";
@@ -13,8 +11,6 @@ import Footer from "../../components/Footer/footer";
 
 const Home = () => {
 
-    const selectedColor = useAtomValue(selectedColorAtom);
-
     useEffect(() => {
         window.scrollTo(0,0)
     },[])
@@ -25,7 +21,7 @@ const Home = () => {
         <div id="outer-container">
         <main id="page-wrap">
         <div className="greying">
-        <Navbar selectedColor={selectedColor}/>
+        <Navbar/>
         <HeroBanner/>
         <About/>
         <Skills/>

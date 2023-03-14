@@ -110,7 +110,7 @@
     position: absolute;
     right: 0%;
     bottom: 0%;
-    background-color: var(--orange);
+    background-color: var(--selected-color);
 }
 
 .plus-logo {
