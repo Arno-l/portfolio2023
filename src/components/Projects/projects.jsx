@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSetAtom, useAtomValue } from "jotai";
-import { projectLogoAtom, projectNumberAtom, projectInfoAtom, fullRealizationAtom, projectLinkAtom, activeTabAtom } from "../../store/atoms";
+import { projectLogoAtom, projectNumberAtom, projectInfoAtom, fullRealizationAtom, projectLinkAtom, activeTabAtom, activePopupAtom } from "../../store/atoms";
 import "./projects.css";
 import portfolioScreen from "../../assets/images/portfolio-screen.png";
 import clvScreen from "../../assets/images/clv-screen.png";
@@ -27,6 +27,7 @@ const Projects = () => {
   const setFullRealization = useSetAtom(fullRealizationAtom);
   const setProjectLink = useSetAtom(projectLinkAtom);
   const activeTab = useAtomValue(activeTabAtom);
+  const setActivePopup = useSetAtom(activePopupAtom);
   const [isHovered, setIsHovered] = useState(false);
 
   function handleHover() {
@@ -69,12 +70,7 @@ const Projects = () => {
 
 
   function activePopup() {
-    document.getElementsByClassName("project-details")[0].style.display =
-      "flex";
-
-    const body = document.querySelector('body');
-    body.style.opacity = '0.3';
-
+    setActivePopup(true);
     document.getElementsByClassName("navbar")[0].focus();
   }
 

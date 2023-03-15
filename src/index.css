@@ -35,9 +35,21 @@
  .body-light {
    background-image: linear-gradient(to top, #e0e0e0, #d1d1d1)!important;
  }
-
+ .border-s-light {
+  border: 1px solid var(--dark)!important;
+ }
+ .border-m-light {
+  border: 2px solid var(--dark2)!important;
+ }
+ .border-RL-light {
+  border-right: 2px solid var(--dark2)!important;
+  border-bottom: 2px solid var(--dark2)!important;
+ }
  .bg-light {
    background-color: var(--logo)!important;
+ }
+ .background-light {
+  background: var(--dark2)!important;
  }
  .text-light {
    color: var(--dark2)!important;

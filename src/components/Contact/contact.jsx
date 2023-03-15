@@ -114,9 +114,9 @@ const Contact = () => {
           </p>
         </div>
         <form className="contact-form" onSubmit={sendEmail}>
-            <input name="name" type="text" className={`feedback-input ${activeTab === 2 ? 'text-light' : ''}`} placeholder="Nom"/>
-            <input name="email" type="text" className={`feedback-input ${activeTab === 2 ? 'text-light' : ''}`} placeholder="Email"/>
-            <textarea type="text" name="message" className={`contact-textarea ${activeTab === 2 ? 'text-light' : ''}`} placeholder="Votre message..."/>
+            <input name="name" type="text" className={`feedback-input ${activeTab === 2 ? 'text-light border-s-light' : ''}`} placeholder="Nom"/>
+            <input name="email" type="text" className={`feedback-input ${activeTab === 2 ? 'text-light border-s-light' : ''}`} placeholder="Email"/>
+            <textarea type="text" name="message" className={`contact-textarea ${activeTab === 2 ? 'text-light border-s-light' : ''}`} placeholder="Votre message..."/>
             <input type="submit" className="submit-form-btn" value="Envoyer" />
         </form>
       </div>

@@ -1,5 +1,7 @@
 import React, {useEffect} from "react";
 import "./home.css";
+import { useAtomValue } from "jotai";
+import { activePopupAtom } from "../../store/atoms";
 import HeroBanner from "../../components/HeroBanner/heroBanner";
 import About from "../../components/About/about";
 import Skills from "../../components/Skills/skills";
@@ -11,6 +13,8 @@ import Footer from "../../components/Footer/footer";
 
 const Home = () => {
 
+    const activePopup = useAtomValue(activePopupAtom);
+
     useEffect(() => {
         window.scrollTo(0,0)
     },[])
@@ -20,6 +24,7 @@ const Home = () => {
         <ProjectDetails/>
         <div id="outer-container">
         <main id="page-wrap">
+        <div className={`greying ${activePopup ? 'active-grey' : ''}`}>
         <Navbar/>
         <HeroBanner/>
         <About/>
@@ -27,6 +32,7 @@ const Home = () => {
         <Projects/>
         <Contact/>
         <Footer/>
+        </div>
         </main>
         </div>
         </>

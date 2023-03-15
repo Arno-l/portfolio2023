@@ -56,7 +56,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className={`navbar ${visible && activeTab === 1 ? "navbar-visible" : visible && activeTab === 2 ? "navbar-visible bg-light": "navbar-hidden"}`}>
+      <nav className={`navbar ${visible && activeTab === 1 ? "navbar-visible" : visible && activeTab === 2 ? "navbar-visible bg-light": `navbar-hidden ${activeTab === 2 ? 'bg-light' : ''}`}`}>
         
         <div className="navbar-logo-ctn">
         <a href="#"><img src={logo} className="navbar-logo" alt="logo portfolio" /></a>

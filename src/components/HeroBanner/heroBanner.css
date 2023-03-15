@@ -34,7 +34,7 @@
 
 /* Screen width of 370px and below */
 @media only screen and (max-width: 370px) {
-  #name {
+  .name {
     font-size: 3em!important;
   }
   .banner-text {
@@ -47,10 +47,10 @@
 }
 
 @media only screen and (min-width: 370px) and (max-width: 600px) {
-  #name {
+  .name {
     font-size: 4.2em!important;
   }
-  #iam {
+  .iam {
     font-size: 2em;
   }
   .mouse_scroll {
@@ -68,7 +68,7 @@
 
 /* Screen width between 600px and 1199px */
 @media only screen and (min-width: 600px) and (max-width: 1199px) {
-  #name {
+  .name {
     font-size: 6em!important;
   }
   .banner-text {
@@ -84,10 +84,10 @@
   .banner-text {
     margin-left: 200px;
   }
-  #name {
+  .name {
     font-size: 7em !important;
   }
-  #iam {
+  .iam {
     font-size: 3em !important;
   }
   #job {
@@ -100,7 +100,7 @@
   .banner-text {
     margin-left: 300px;
   }
-  #name {
+  .name {
     font-size: 8em !important;
   }
   #job {
@@ -113,7 +113,7 @@
   .banner-text {
     margin-left: 350px;
   }
-  #name {
+  .name {
     font-size: 9em !important;
   }
   #job {
@@ -126,7 +126,7 @@
   .banner-text {
     margin-left: 400px;
   }
-  #name {
+  .name {
     font-size: 10em !important;
   }
   #job {
@@ -152,10 +152,10 @@
 
 /* Screen height of 700px and below */
 @media only screen and (max-height: 700px) {
-  #iam {
+  .iam {
     font-size: 2em !important;
   }
-  #name {
+  .name {
     font-size: 3em ;
   }
 }
@@ -249,7 +249,7 @@
       margin-top: -80px!important;
       padding-bottom: 50px;
     }
-    #name {
+    .name {
       font-size: 5em !important;
     }
 }

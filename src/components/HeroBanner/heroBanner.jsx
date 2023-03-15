@@ -31,13 +31,13 @@ const HeroBanner = () => {
                 </div>
                 </div>
                 <div className="mouse_scroll">
-                <div className="mouse">
-			        <div className="wheel"></div>
+                <div className={`mouse ${activeTab === 2 ? 'border-m-light' : ''}`}>
+			        <div className={`wheel ${activeTab === 2 ? 'border-m-light background-light' : ''}`}></div>
 		        </div>
 		        <div>
-			    <span className="m_scroll_arrows unu"></span>
-			    <span className="m_scroll_arrows doi"></span>
-			    <span className="m_scroll_arrows trei"></span>
+			    <span className={`m_scroll_arrows unu ${activeTab === 2 ? 'border-RL-light' : ''}`}></span>
+			    <span className={`m_scroll_arrows doi ${activeTab === 2 ? 'border-RL-light' : ''}`}></span>
+			    <span className={`m_scroll_arrows trei ${activeTab === 2 ? 'border-RL-light' : ''}`}></span>
 		        </div>
             </div>
             </div> 

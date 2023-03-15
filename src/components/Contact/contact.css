@@ -47,7 +47,7 @@
 
 .feedback-input:hover,
 .feedback-input:focus {
-  border-color: var(--selected-color);
+  border-color: var(--selected-color)!important;
 }
 
 .contact-textarea {
@@ -72,7 +72,7 @@
 
 .contact-textarea:hover,
 .contact-textarea:focus {
-  border-color: var(--selected-color);
+  border-color: var(--selected-color)!important;
 }
 
 .submit-form-btn {
