@@ -38,6 +38,7 @@ const FirstPage = () => {
          /> : <></>
          }
          </div>
+         <link rel="preload" href="/home" as="fetch" crossOrigin="anonymous" />
         </>
     )
 }

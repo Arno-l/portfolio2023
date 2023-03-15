@@ -1,5 +1,5 @@
 .bg-img {
-  background-image: url("../../assets/images/pikrepo2.png");
+  background-image: url("../../assets/images/pikrepo2.webp");
   min-height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -8,7 +8,7 @@
 }
 
 .bg-img-light {
-  background-image: url("../../assets/images/pikrepo3.png");
+  background-image: url("../../assets/images/pikrepo3.webp");
 }
 
 /*-------------------- NAVBAR -----------------------------------------*/
@@ -84,7 +84,7 @@ margin-top: 10px;
 
 
 #about {
-  background-image: url("../../assets/images/server-rooms.jpg");
+  background-image: url("../../assets/images/server-rooms.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -92,7 +92,7 @@ margin-top: 10px;
 }
 
 #skills {
-  background-image: url("../../assets/images/skills-bg.jpeg");
+  background-image: url("../../assets/images/skills-bg.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -100,7 +100,7 @@ margin-top: 10px;
 }
 
 #projects {
-  background-image: url("../../assets/images/projects-bg.jpeg");
+  background-image: url("../../assets/images/projects-bg.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -108,7 +108,7 @@ margin-top: 10px;
 }
 
 #contact {
-  background-image: url("../../assets/images/contact-bg.jpeg");
+  background-image: url("../../assets/images/contact-bg.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -163,7 +163,7 @@ margin-top: 10px;
 }
 
 .bm-item-list a:nth-child(2) {
-  background-image: url("../../assets/images/server-rooms.jpg");
+  background-image: url("../../assets/images/server-rooms.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -171,7 +171,7 @@ margin-top: 10px;
 }
 
 .bm-item-list a:nth-child(3) {
-  background-image: url("../../assets/images/skills-bg.jpeg");
+  background-image: url("../../assets/images/skills-bg.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -179,7 +179,7 @@ margin-top: 10px;
 }
 
 .bm-item-list a:nth-child(4) {
-  background-image: url("../../assets/images/projects-bg.jpeg");
+  background-image: url("../../assets/images/projects-bg.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -187,7 +187,7 @@ margin-top: 10px;
 }
 
 .bm-item-list a:nth-child(5) {
-  background-image: url("../../assets/images/contact-bg.jpeg");
+  background-image: url("../../assets/images/contact-bg.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
