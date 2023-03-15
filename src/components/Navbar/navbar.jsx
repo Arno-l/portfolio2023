@@ -3,12 +3,23 @@ import "./navbar.css";
 import { styles } from "./burgerMenuStyle";
 import { slide as Menu } from "react-burger-menu";
 import { Link } from "react-router-dom";
-import burger from "../../assets/images/burger.svg";
 import { Typewriter } from "react-simple-typewriter";
 import { Scrollchor, easeOutQuad } from "react-scrollchor";
 import StyleMenu from "../styleMenu/styleMenu";
 import { useAtomValue } from "jotai";
 import { colorNumberAtom, activeTabAtom } from "../../store/atoms";
+import burger1 from "../../assets/images/burger1.svg";
+import burger2 from "../../assets/images/burger2.svg";
+import burger3 from "../../assets/images/burger3.svg";
+import burger4 from "../../assets/images/burger4.svg";
+import burger5 from "../../assets/images/burger5.svg";
+import burger6 from "../../assets/images/burger6.svg";
+import burger7 from "../../assets/images/burger7.svg";
+import burger8 from "../../assets/images/burger8.svg";
+import burger9 from "../../assets/images/burger9.svg";
+import burger10 from "../../assets/images/burger10.svg";
+import burger11 from "../../assets/images/burger11.svg";
+import burger12 from "../../assets/images/burger12.svg";
 import logo1 from "../../assets/images/a.lcci-1.png";
 import logo2 from "../../assets/images/a.lcci-2.png";
 import logo3 from "../../assets/images/a.lcci-3.png";
@@ -31,6 +42,7 @@ const Navbar = () => {
   const colorNumber = useAtomValue(colorNumberAtom);
   const activeTab = useAtomValue(activeTabAtom);
   const logo = colorNumber === 1 ? logo1 : colorNumber === 2 ? logo2 : colorNumber === 3 ? logo3 : colorNumber === 4 ? logo4 : colorNumber === 5 ? logo5 : colorNumber === 6 ? logo6 : colorNumber === 7 ? logo7 : colorNumber === 8 ? logo8 : colorNumber === 9 ? logo9 : colorNumber === 10 ? logo10 : colorNumber === 11 ? logo11 : colorNumber === 12 ? logo12 : null;
+  const burger = colorNumber === 1 ? burger1 : colorNumber === 2 ? burger2 : colorNumber === 3 ? burger3 : colorNumber === 4 ? burger4 : colorNumber === 5 ? burger5 : colorNumber === 6 ? burger6 : colorNumber === 7 ? burger7 : colorNumber === 8 ? burger8 : colorNumber === 9 ? burger9 : colorNumber === 10 ? burger10 : colorNumber === 11 ? burger11 : colorNumber === 12 ? burger12 : null;
 
   useEffect(() => {
     

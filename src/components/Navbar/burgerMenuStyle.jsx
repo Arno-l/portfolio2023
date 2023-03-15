@@ -1,10 +1,10 @@
  export var styles = {
     bmBurgerButton: {
         position: 'absolute',
-        width: '60px',
-        height: '60px',
-        right: '35px',
-        top: '1.3rem'
+        width: '100px',
+        height: '100px',
+        right: '10px',
+        top: '0.2rem'
       },
       bmBurgerBars: {
         background: 'var(--selected-color)'
