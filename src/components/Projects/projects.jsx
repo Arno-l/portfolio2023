@@ -52,7 +52,7 @@ const Projects = () => {
         setProjectNumber(2);
         setProjectInfo("Un site web vitrine crée pour une association de chant choral dans le cadre de mon stage de la fin de formation à The Hacking Project.");
         setFullRealization(["Frontend avec React.js", "Backend avec Ruby on Rails et Postgresql", "Authentification via JWT (Json Web Tokens)", "Hébergement des médias sur Cloudinary", "Mise à l'échelle de la BDD avec Fly.io", "Référencement naturel SEO", "Site responsive (compatible tous supports)"]);
-        setProjectLink("#");
+        setProjectLink("https://www.chantelavie.fr/");
         break;
       case 3:
         setProjectLogo(scoreitLogo);
