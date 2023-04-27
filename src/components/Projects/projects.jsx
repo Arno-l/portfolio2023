@@ -119,7 +119,7 @@ const Projects = () => {
             <img
               className="screenshot"
               src={clvScreen}
-              alt="portfolio screenshot"
+              alt="website screenshot"
             />
             <div className="project-title-container">
               <h1 className="project-title">CLV association</h1>
@@ -148,7 +148,7 @@ const Projects = () => {
             <img
               className="screenshot"
               src={scoreitScreen}
-              alt="portfolio screenshot"
+              alt="website screenshot"
             />
             <div className="project-title-container">
               <h1 className="project-title">Score it</h1>
